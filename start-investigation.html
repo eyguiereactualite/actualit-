@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escape Game Maison DIY</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Corrigé le lien vers le fichier CSS -->
+</head>
+<body>
+
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <h1 class="site-title">Escape Game Maison DIY</h1>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="#start" class="nav-link">Démarrer</a></li>
+          <li><a href="#enigmes" class="nav-link">Énigmes</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+      <section id="start" class="article">
+        <h2 class="article-title">Commencer l'aventure</h2>
+        <p class="article-meta">Explorez votre première énigme.</p>
+        <img src="image1.jpg" alt="Énigme 1" class="article-image">
+        <p class="article-intro">Bienvenue dans l'escape game maison DIY. Résolvez les énigmes pour avancer dans l'aventure !</p>
+        <div class="button-group">
+          <a href="#enigmes" class="button">Commencer l'énigme</a>
+        </div>
+      </section>
+
+      <section id="enigmes" class="article">
+        <h2 class="article-title">Les Énigmes</h2>
+        <!-- Première énigme -->
+        <div class="article-section">
+          <h3>Énigme 1: Le Début</h3>
+          <p>Résolvez cette première énigme pour commencer votre aventure.</p>
+          <input type="text" id="answer1" placeholder="Entrez votre réponse" class="input-response">
+          <button class="button" onclick="checkAnswer('answer1', 'correctAnswer1')">Valider</button>
+        </div>
+        
+        <!-- Énigmes futures, grises et verrouillées -->
+        <div class="article-section locked">
+          <h3>Énigme 2: Le Mystère</h3>
+          <p>Cette mission est verrouillée pour l'instant.</p>
+          <span class="lock-icon">🔒</span>
+        </div>
+        <div class="article-section locked">
+          <h3>Énigme 3: La Clé Cachée</h3>
+          <p>Cette mission est verrouillée pour l'instant.</p>
+          <span class="lock-icon">🔒</span>
+        </div>
+        <div class="article-section locked">
+          <h3>Énigme 4: Le Labyrinthe</h3>
+          <p>Cette mission est verrouillée pour l'instant.</p>
+          <span class="lock-icon">🔒</span>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2025 Escape Game Maison DIY - Tous droits réservés</p>
+    </footer>
+  </div>
+
+  <script>
+    function checkAnswer(inputId, correctAnswer) {
+      var userAnswer = document.getElementById(inputId).value.trim().toLowerCase();
+      var correct = document.getElementById(correctAnswer);
+      
+      if(userAnswer === correct.textContent.trim().toLowerCase()) {
+        alert("Bonne réponse ! Vous avez débloqué la prochaine mission.");
+        document.querySelectorAll(".locked")[0].classList.remove("locked");  // Déverrouiller la première mission
+      } else {
+        alert("Mauvaise réponse. Essayez encore !");
+      }
+    }
+  </script>
+</body>
+</html>
