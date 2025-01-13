@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actualités d'Eyguières</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #0078D4;
+      color: white;
+      padding: 20px 10%;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #0056A8;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #FFD700;
+    }
+
+    .content {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    .article-preview {
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+    }
+
+    .article-preview h2 {
+      margin: 0;
+      color: #0078D4;
+    }
+
+    .article-preview p {
+      color: #666;
+    }
+
+    .article-preview img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: #0078D4;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .cta-button:hover {
+      background-color: #0056A8;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Actualités d'Eyguières</h1>
+  </header>
+
+  <nav>
+    <a href="index.html" class="menu-button">Accueil</a>
+    <a href="societe.html" class="menu-button">Société</a>
+    <a href="culture.html" class="menu-button">Culture</a>
+    <a href="contact.html" class="menu-button">Contact</a>
+  </nav>
+
+  <div class="content">
+    <div class="article-preview">
+      <img src="images/fete-lavande.jpg" alt="Fête de la Lavande">
+      <h2>Fête de la Lavande : un succès éclatant</h2>
+      <p>Le marché provençal a attiré des centaines de visiteurs ce week-end. Découvrons les moments forts...</p>
+      <a href="fete-lavande.html" class="cta-button">Lire l'article</a>
+    </div>
+
+    <div class="article-preview">
+      <img src="images/puits-romain.jpg" alt="Puits Romain">
+      <h2>Découverte archéologique au cœur du village</h2>
+      <p>Un ancien puits romain a été mis au jour lors de travaux. Les experts se penchent sur cette trouvaille...</p>
+      <a href="decouverte-archeologique.html" class="cta-button">Lire l'article</a>
+    </div>
+
+    <div class="article-preview">
+      <img src="images/batiment-b.jpg" alt="Bâtiment B">
+      <h2>Mystère au bâtiment B des Magnanons</h2>
+      <p>Les habitants rapportent des événements étranges. Entre ombres nocturnes et disparitions, l'enquête s'annonce captivante...</p>
+      <a href="mystere-magnanons.html" class="cta-button">Lire l'article</a>
+    </div>
+  </div>
+
+</body>
+</html>
